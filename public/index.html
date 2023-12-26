@@ -7,6 +7,7 @@
     <title>Rayyan Balami - StudiNotes</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <script src="../js/script.js" defer></script>
+    <script src="../js/threeDotMenu.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 <h2 class="menu-section-category">MAIN MENU</h2>
                 <ul>
                     <li>
-                        <a href="index.html" class="menu-links is-active">
+                        <a href="index.html" class="menu-links  is-active">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -330,7 +331,6 @@
             </ul>
         </div>
     </div>
-
     <main>
         <header>
             <h1 class="logo">StudiNotes</h1>
@@ -380,7 +380,6 @@
             <!-- card-section  -->
             <div class="card-section">
                 <!-- card 1 -->
-
                 <div class="card ">
                     <!-- image -->
                     <div class="thumbnail">
@@ -449,7 +448,7 @@
                     <div class="time">
                         <p>1 hour Ago</p>
                         <!-- three dot icon -->
-                        <button class="three-dot-icon">
+                        <button class="three-dot-icon" onclick="openThreeDotMenu('1')">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 24">
                                 <path fill="#000"
@@ -567,7 +566,7 @@
                     <div class="time">
                         <p>1 hour Ago</p>
                         <!-- three dot icon -->
-                        <button class="three-dot-icon">
+                        <button class="three-dot-icon" onclick="openThreeDotMenu('2')">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 24">
                                 <path fill="#000"
@@ -685,7 +684,7 @@
                     <div class="time">
                         <p>1 hour Ago</p>
                         <!-- three dot icon -->
-                        <button class="three-dot-icon">
+                        <button class="three-dot-icon" onclick="openThreeDotMenu('3')">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 24">
                                 <path fill="#000"
@@ -803,7 +802,7 @@
                     <div class="time">
                         <p>1 hour Ago</p>
                         <!-- three dot icon -->
-                        <button class="three-dot-icon">
+                        <button class="three-dot-icon" onclick="openThreeDotMenu('4')">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 24">
                                 <path fill="#000"
@@ -921,7 +920,7 @@
                     <div class="time">
                         <p>1 hour Ago</p>
                         <!-- three dot icon -->
-                        <button class="three-dot-icon">
+                        <button class="three-dot-icon" onclick="openThreeDotMenu('5')">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 24">
                                 <path fill="#000"
@@ -1038,7 +1037,7 @@
                     <div class="time">
                         <p>1 hour Ago</p>
                         <!-- three dot icon -->
-                        <button class="three-dot-icon">
+                        <button class="three-dot-icon" onclick="openThreeDotMenu('6')">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 24">
                                 <path fill="#000"
@@ -1156,7 +1155,7 @@
                     <div class="time">
                         <p>1 hour Ago</p>
                         <!-- three dot icon -->
-                        <button class="three-dot-icon">
+                        <button class="three-dot-icon" onclick="openThreeDotMenu('7')">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 24">
                                 <path fill="#000"
@@ -1274,7 +1273,7 @@
                     <div class="time">
                         <p>1 hour Ago</p>
                         <!-- three dot icon -->
-                        <button class="three-dot-icon">
+                        <button class="three-dot-icon" onclick="openThreeDotMenu('8')">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 24">
                                 <path fill="#000"
@@ -1352,7 +1351,36 @@
             </footer>
         </section>
     </main>
-    
+
+    <!-- popup -->
+    <div id="three-dot-menu" onclick="closeThreeDotMenu()">
+        <ul class="max-w-sm divide-y divide-gray-200 dark:divide-gray-700">
+            <input type="hidden" value="">
+            
+            <li>
+                <a id="share" href="" target="_blank">
+                    Share
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    Add to Saved
+                </a>
+            </li>
+            <li>
+                <a class="danger" href="" target="_blank">
+                    Report
+                </a>
+            </li>
+            <li>
+                <button class="danger">
+                    Cancel
+                </button>
+            </li>
+        </ul>
+    </div>
+
+
 </body>
 
 </html>
