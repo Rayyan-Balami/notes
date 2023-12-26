@@ -44,6 +44,7 @@ body.menu-open {
 
 .danger {
   color: var(--danger-color);
+  font-weight: 500;
 }
 
 .success {
