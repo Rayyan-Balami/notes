@@ -1,0 +1,33 @@
+:root {
+  --background-color: rgb(255 255 255);
+  --background-gray: rgb(249 250 251);
+  --border: 1px solid rgb(229 231 235);
+  --transition : all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --hover-color: rgb(243 244 246);
+  --border-radius: 0.75rem;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.5;
+  font-size: inherit;
+  font-weight: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.is-active {
+  font-weight: 500;
+  background-color: rgb(243 244 246);
+}
+
+
+
