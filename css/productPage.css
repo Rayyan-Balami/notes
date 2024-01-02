@@ -1,0 +1,81 @@
+@import url("variables&global.css");
+@import url("sideNav.css");
+@import url("main.css");
+@import url("header.css");
+@import url("footer.css");
+
+section {
+  padding: 1rem/* 16px */;
+  max-width: 1536px;
+margin: 0 auto;
+transition: var(--transition);
+}
+@media (width >= 768px) {
+  section {
+    padding: 1.5rem/* 24px */;
+  }
+}
+
+section > .thumbnail-container {
+  border-radius: 1rem/* 16px */;
+  overflow: hidden;
+  transition: var(--transition);
+  background: url('https://cdn.vox-cdn.com/thumbor/iaVMlcV5rj0OuPejZ7HyqYslLZk=/0x0:800x333/1400x788/filters:focal(334x72:462x200):format(gif)/cdn.vox-cdn.com/uploads/chorus_image/image/55278741/gatsby.0.gif') center center/cover;
+}
+
+section > .thumbnail-container > .info-thumbnail-wrapper{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.4));
+ backdrop-filter: blur(16px);
+ display: flex;
+ justify-content: space-between;
+ gap: 0.5rem/* 8px */;
+ padding: 0.75rem/* 12px */;
+ transition: var(--transition);
+ transition-duration: 500ms;
+}
+
+@media (width < 768px) {
+  section > .thumbnail-container > .info-thumbnail-wrapper{
+    flex-direction: column;
+  }
+}
+
+@media (width >= 1280px) {
+  section > .thumbnail-container > .info-thumbnail-wrapper:hover > .thumbnail > img {
+    filter: brightness(1.05);
+    scale: 1.1;
+    rotate: -2deg;
+    transition: var(--transition);
+  }
+}
+
+.info {
+  flex-grow: 1;
+  flex-direction: column;
+  color: white;
+  padding-top: 0.5rem/* 8px */;
+  padding: 0 1rem/* 16px */;
+}
+
+.info > .title {
+  font-size: 1.25rem/* 20px */;
+  line-height: 1.25rem/* 28px */;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem/* 8px */;
+  transition: var(--transition);
+}
+@media (min-width: 768px) {
+  .info > .title {
+    font-size: 1.5rem/* 24px */;
+    line-height: 1.25rem/* 28px */;
+  }
+}
+
+.info > .subject {
+  margin-bottom: 0.75rem/* 12px */;
+  font-size: 0.875rem/* 14px */;
+  line-height: 1.25rem/* 20px */;
+  font-weight: 500;
+  text-transform: uppercase;
+}
