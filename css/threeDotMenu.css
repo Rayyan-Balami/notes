@@ -1,0 +1,82 @@
+
+/* three dot menu starts here  */
+
+#three-dot-menu{
+  display: none;
+}
+#three-dot-menu.open{
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  height: 100dvh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s  cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+#three-dot-menu > ul {
+  width: 28rem;
+  background-color:white;
+  border: 4px solid rgb(229 231 235);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--border-radius);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+#three-dot-menu > ul > li > a, 
+#three-dot-menu > ul > li > button {
+  display: block;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+
+#three-dot-menu > ul > li:not(:last-child){
+  border-bottom: var(--border);
+}
+
+
+@media (width < 768px) {
+  #three-dot-menu{
+    position: relative;
+  }
+  #three-dot-menu > ul{
+    width: 90%;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideIn 0.3s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      bottom: -100%;
+    }
+    to {
+      bottom: 1.5rem;
+    }
+  }
+}
+
+/* three dot menu ends here */
